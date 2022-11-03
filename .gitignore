@@ -3,3 +3,4 @@ dist
 .env
 yarn.locknode_modules
 /lib
+yarn.lock
