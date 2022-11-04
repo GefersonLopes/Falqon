@@ -7,6 +7,9 @@ import { User_Router } from "./routes/user.routes";
 
 const app = express();
 
+const cors = require("cors");
+app.use(cors());
+
 app.use(express.json());
 
 app.use("/tasks", Tasks_Router);
