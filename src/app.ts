@@ -7,8 +7,9 @@ import { User_Router } from "./routes/user.routes";
 
 const app = express();
 
-const cors = require("cors");
-app.use(cors());
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*")
+  }) 
 
 app.use(express.json());
 
