@@ -1,4 +1,4 @@
-import express from "express"
+import express from "express";
 
 import { error } from "./middlewares/Error";
 
@@ -6,10 +6,13 @@ import { Tasks_Router } from "./routes/tasks.routes";
 import { User_Router } from "./routes/user.routes";
 
 const app = express();
+const cors = require("cors");
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*")
-  }) 
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 
 app.use(express.json());
 
